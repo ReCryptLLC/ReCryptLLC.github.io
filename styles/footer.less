@@ -1,0 +1,112 @@
+// main: ./main.less
+
+@import "./theme.less";
+
+.contact-us {
+  box-shadow: 0px 12px 44px rgba(0, 0, 0, 0.2);
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  @media (max-width: 800px) {
+    display: block;
+    margin-bottom: 30px;
+    padding: 40px 20px 20px;
+  }
+
+  .title {
+    color: @third;
+    font-size: 20px;
+    font-weight: 600;
+
+    @media (max-width: 800px) {
+      text-align: center;
+    }
+  }
+
+  a.mail {
+    display: inline-block;
+    margin-top: 25px;
+    background: @primary;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: #fff;
+
+    &:hover {
+      opacity: 0.8;
+      box-shadow: 0 0 5px rgba(0,0,0,.32);
+    }
+
+    @media (max-width: 800px) {
+      display: block;
+      text-align: center;
+      padding: 20px;
+      font-size: 20px;
+      border-radius: 12px;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: stretch;
+    height: inherit;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 800px) {
+      justify-content: space-between;
+      margin: 30px 0;
+    }
+
+    .copy {
+      margin-left: 40px;
+      color: #fff;
+      opacity: .5;
+    }
+  }
+
+  .social {
+    @media (max-width: 800px) {
+      align-self: center;
+      margin: 20px 0 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .chip {
+      background: @primary;
+      color: @secondary;
+      height: 40px;
+    }
+
+    .social-link {
+      color: @secondary;
+      width: 40px;
+    }
+
+    .label {
+      color: #fff;
+      opacity: .5;
+
+      @media (max-width: 800px) {
+        flex: 1 0 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+// out: ./main.css, sourcemap: false, compress: true
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px "Roboto";
+}
+
+a {
+  text-decoration: none;
+}
+
+// Контейнер, определяет ширину контента
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: @max-width;
+}
+
+.primary-bg {
+  background-color: @primary;
+  color: @secondary;
+}
+
+.secondary-bg {
+  background-color: @secondary;
+  color: @primary;
+}
+
+.third-bg {
+  background-color: @third;
+  color: @secondary;
+}
+
+// Соцсети
+.social {
+  display: flex;
+  align-items: center;
+
+  .chip {
+    flex-shrink: 0;
+    background: @secondary;
+    color: rgba(23,29,41,.5);
+    height: 42px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  .social-link {
+    color: @primary;
+    width: 42px;
+
+    &:hover {
+      opacity: .8;
+      box-shadow: 0 0 8px rgba(0,0,0,.32);
+    }
+  }
+
+  .label {
+    padding: 0 35px;
+  }
+}
+
+// Блок с текстом и большой картинкой
+.image-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 70px 40px;
+
+  @media (max-width: 800px) {
+    flex-direction: column-reverse;
+    padding: 50px 30px;
+    align-items: flex-start;
+  }
+
+
+  .image {
+    margin-right: 60px;
+    width: 100%;
+
+    @media (max-width: 800px) {
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .image-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .chip {
+      margin-bottom: 20px;
+      border-radius: 20px;
+      border: 1px solid;
+      padding: 8px 45px;
+      font-size: 16px;
+
+      @media (max-width: 800px) {
+        padding: 5px 30px;
+      }
+    }
+
+    .text {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 1.5em;
+
+      @media (max-width: 800px) {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@import "./header.less";
+@import "./explore.less";
+@import "./project.less";
+@import "./develop.less";
+@import "./protect.less";
+@import "./theme.less";
+@import "./footer.less";

@@ -1,0 +1,22 @@
+// main: ./main.less
+
+@import "./theme.less";
+
+#protect {
+  .image-block {
+    .image {
+      max-width: 320px;
+    }
+
+    .image-text {
+      .text {
+        font-size: 26px;
+        color: @third;
+
+        @media (max-width: 800px) {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}

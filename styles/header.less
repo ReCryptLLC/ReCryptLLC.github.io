@@ -1,0 +1,195 @@
+// main: ./main.less
+
+@import "./theme.less";
+
+#topLink {
+  position: fixed;
+  width: 48px;
+  height: 48px;
+  left: 30px;
+  bottom: 30px;
+  opacity: .5;
+  background: rgba(0,0,0,.35);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all .3s;
+
+  &:hover {
+    opacity: 1;
+    transition: all .3s;
+  }
+}
+
+.top-bg {
+  background-image: url("../images/topbg.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: cover;
+  position: relative;
+
+  .gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%;
+    background: linear-gradient(180deg, rgba(13, 114, 208, 0) 0%, #0D72D0 100%);
+  }
+}
+
+.top {
+  header {
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 800px) {
+      padding: 20px 10px;
+    }
+
+    .logo {
+      @media (max-width: 800px) {
+        img {
+          width: 120px;
+        }
+      }
+    }
+
+    .social {
+      @media (max-width: 500px) {
+        .chip.label {
+          display: none;
+        }
+      }
+
+      @media (max-width: 800px) {
+        .chip.label {
+          background: transparent;
+          color: #fff;
+          opacity: .6;
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+
+  .top-info {
+    margin: 40px 85px;
+    z-index: 2;
+
+    @media (max-width: 800px) {
+      margin: 40px 10px;
+    }
+
+    .cat-links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      a {
+        font-size: 46px;
+        color: #fff;
+        font-weight: 600;
+        margin-bottom: 10px;
+
+        @media (max-width: 800px) {
+          font-size: 36px;
+        }
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .mail {
+      display: inline-block;
+      margin-top: 40px;
+      background: @third;
+      padding: 15px 35px;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 18px;
+
+      &:hover {
+        opacity: 0.8;
+        box-shadow: 0 0 5px rgba(0,0,8px,.32);
+      }
+
+      @media (max-width: 800px) {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 80px;
+        display: block;
+        text-align: center;
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-radius: 12px;
+      }
+    }
+
+    .contact-sign {
+      color: #fff;
+      opacity: 0.6;
+      margin-top: 12px;
+      font-size: 16px;
+
+      @media (max-width: 800px) {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+.team-core {
+  padding: 70px 0;
+
+  @media (max-width: 800px) {
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+
+  .card {
+    background: @secondary;
+    padding: 50px 84px;
+    box-shadow: 0 0 3px rgba(0,0,5px,.12);
+    background-image: url("../images/recrypt-texture.svg");
+    background-repeat: no-repeat;
+    background-position: right;
+    box-sizing: border-box;
+    background-size: 50%;
+    box-shadow: 0px 12px 44px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+
+    @media (max-width: 800px) {
+      padding: 50px;
+      margin-left: 10px;
+      margin-right: 10px;
+      background-position: right bottom;
+    }
+
+    .label {
+      color: @primary;
+      margin-bottom: 15px;
+      font-size: 16px;
+    }
+
+    p.description {
+      font-size: 24px;
+      color: @third;
+      font-weight: 600;
+      line-height: 1.5em;
+
+      strong {
+        color: @primary;
+      }
+    }
+  }
+}
